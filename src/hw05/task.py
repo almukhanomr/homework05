@@ -32,3 +32,21 @@ def pipeline() -> int:
     random.shuffle(prime_numbers)
 
     return checksum(prime_numbers)
+
+
+def main():
+    count_of_primes = int(input("Введите количество простых чисел (целое число): "))
+    seed = int(input("Введите seed: "))
+
+
+    prime_numbers = primes(count_of_primes)
+
+    random.seed(seed)
+    random.shuffle(prime_numbers)
+
+    for prime in prime_numbers:
+        print(prime)
+
+
+if __name__ == "__main__":
+    main()
